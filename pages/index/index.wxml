@@ -1,0 +1,13 @@
+<view>
+  <view>
+    <van-button round type="primary" bind:click="showTreeSelect">按钮</van-button>
+    <view class="at-article_content">
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+  </view>
+  <van-popup show="{{ treeSelectShow }}" bind:close="onClose" position="left" closeable>
+    <van-tree-select items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" height="100%" bind:click-nav="onClickNav" bind:click-item="onClickItem" />
+  </van-popup>
+</view>
